@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
-public class VsBot extends JFrame implements ActionListener {
+public class VsBot extends JPanel implements ActionListener {
     GameSource src = new GameSource(this);
     Random bot = new Random(); // "bot"))))))))))))))))))))))))))))))))))))))))
 
@@ -18,12 +18,8 @@ public class VsBot extends JFrame implements ActionListener {
             src.buttons[i] = new GameButton(this);
             this.add(src.buttons[i]);
         }
-
-        this.setResizable(false); //frame are not resizable
         this.setLayout(new GridLayout(3, 3)); //no layout manager to move buttons easier
-        this.setVisible(true); //visibility true
-        this.setSize(600, 600); //size of frame
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setSize(600,600);
     }
 
     @Override

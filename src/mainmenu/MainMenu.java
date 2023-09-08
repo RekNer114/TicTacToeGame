@@ -1,8 +1,6 @@
 package mainmenu;
 
-import game.VsBot;
-import game.VsPlayer;
-
+import game.GameFrame;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -35,13 +33,13 @@ public class MainMenu extends JFrame implements ActionListener {
         if (e.getSource().equals(vsBot))
         {
             this.dispose();
-            new VsBot();
+            new GameFrame(true);
         }
 
         if (e.getSource().equals(vsPlayer))
         {
             this.dispose();
-            new VsPlayer();
+            new GameFrame(false);
         }
 
         if (e.getSource().equals(exit))
